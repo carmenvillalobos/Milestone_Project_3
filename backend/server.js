@@ -1,5 +1,5 @@
 // DEPENDENCIES: Where we require all our packages
-require('dotenv').config
+require('dotenv').config()
 const express = require('express')
 const app = express()
 const { Sequelize } = require('sequelize');

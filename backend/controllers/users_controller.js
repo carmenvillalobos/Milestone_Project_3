@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const users = require('express').Router()
-const { Users } = require('../models')
+const { User } = require('../models')
 
 //GET ALL users
 users.get('/', async (req, res) => {

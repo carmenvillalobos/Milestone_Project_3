@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const destinations = require('express').Router()
-const { Destinations } = require('../models')
+const { Destination } = require('../models')
 
 //GET ALL destinations
 destinations.get('/', async (req, res) => {
@@ -28,12 +28,14 @@ destinations.get('/:id', async (req, res) => {
 // CREATE A destination
 destinations.post('/', async (req, res) => {
     try {
+        console.log(req.body)
         const newDestination = await Destination.create(req.body)
         res.status(200).json({
             message: 'Successfully inserted a new destination',
             data: newDestination
         })
     } catch(err) {
+        console.log(err)
         res.status(500).json(err)
     }
 })
