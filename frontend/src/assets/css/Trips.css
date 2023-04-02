@@ -1,0 +1,26 @@
+.grid{
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* padding-bottom: 75px;
+    padding-top: 70px; */
+}
+
+.fav-img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position:absolute;
+    filter: brightness(0.5);
+    top: 0;
+    left: 0;
+}
+
+.Trips{
+    width: 18rem;
+    margin: auto;
+    padding: auto;
+    margin-top: 50px;
+    background-color: transparent;
+}
