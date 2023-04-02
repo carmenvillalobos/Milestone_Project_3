@@ -1,0 +1,13 @@
+body{
+    background: rgb(84, 84, 63);
+}
+.container{
+    border-radius: 15px ;
+    justify-content: center;
+    display: flex;
+    height: 80vh;
+}
+
+h1{
+    text-align: center;
+}
