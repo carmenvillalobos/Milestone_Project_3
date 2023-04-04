@@ -22,7 +22,7 @@ function NavBar() {
             </Navbar.Item>
             {/* Sign-up */}
             <Navbar.Item>
-                <Navbar.Link className='text' href='/Sign-Up'>Sign-up</Navbar.Link>
+                <Navbar.Link className='text personal' href='/Sign-Up'>Sign-up</Navbar.Link>
             </Navbar.Item>
         </Navbar>
     )
