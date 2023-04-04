@@ -6,6 +6,7 @@ const { Sequelize } = require('sequelize');
 const usersController = require('./controllers/users_controller')
 const destinationsController = require('./controllers/destinations_controller')
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 
 // CONFIGURATION / MIDDLEWARE: Where we configure those dependency packages
 app.use(express.json())
@@ -43,8 +44,6 @@ app.get('/', (req, res) => {
 // CONTROLLERS: this includes the routes for each table
 app.use('/users', usersController)
 app.use('/destinations', destinationsController)
-
-
 
 //LISTEN: Where we tell our app what port to listen for connections on
 testSequelize();
