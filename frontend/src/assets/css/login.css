@@ -1,0 +1,54 @@
+.main {
+    min-height: 100vh; 
+}
+
+.auth, .login-form, .register-form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px 300px 0 300px;
+}
+
+.auth {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 15px;
+    /* background-image: linear-gradient(79deg, #ebe9ee, #B2BEB5 48%, #54696e); */
+    background-color: #B2BEB5;
+}
+
+.login-title {
+    margin-top: 25px;
+    margin-bottom: -65px;
+}
+
+label {
+    text-align: left;
+    padding: 0.25rem 0;
+}
+
+input {
+    margin: 0.5rem 0;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+    min-width: 200px;
+    text-align: center;
+}
+
+button {
+    border: none;
+    background-color: white;
+    padding: 8px;
+    min-width: 75px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.link-btn {
+    background: none;
+    color: blue;
+    text-decoration: underline;
+}

@@ -2,15 +2,6 @@ import Navbar from 'react-bootstrap/Nav'
 import '../assets/css/Homepage.css'
 
 function NavBar() {
-    // let nav  = document.querySelector('Navbar')
-
-    // window.addEventListener('scroll', function(){
-    //     if(this.window.pageYOffset > 100){
-    //         nav.className.add('bg-dark', 'shadow');
-    //     }else{
-    //         nav.className.remove('bg-dark', 'shadow')
-    //     }
-    // })
     return(
         <Navbar className="justify-content-center sticky-top">
             <Navbar.Item>
@@ -27,7 +18,7 @@ function NavBar() {
             </Navbar.Item>
             {/* Log-in */}
             <Navbar.Item>
-                <Navbar.Link className='text personal' href='/Log-in'>Log-in</Navbar.Link>
+                <Navbar.Link className='text personal' href='/Login'>Login</Navbar.Link>
             </Navbar.Item>
             {/* Sign-up */}
             <Navbar.Item>
