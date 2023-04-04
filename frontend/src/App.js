@@ -5,6 +5,7 @@ import Trips from './views/Trips'
 import FavPlaces from './views/FavPlaces';
 import Random from './views/Random';
 import Login from './views/Login';
+import SignUp from './views/SignUp';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 function App() {
@@ -22,12 +23,13 @@ function App() {
           <Route path='/Bookings' element={<Trips/>} />
           <Route path='/Destinations' element={<FavPlaces/>} />
           <Route path='/Random' element={<Random/>} />
-          {/* <Route path='/Login' element={<Login/>} /> */}
+          <Route path='/SignUp' element={<SignUp/>} />
+          <Route path='/Login' element={<Login/>} />
         </Routes>
       </Router>
-      {
-        currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <Homepage onFormSwitch={toggleForm}/>
-      }
+      {/* {
+        currentForm === "login" ? <Login onFormSwitch={toggleForm}/> : <SignUp onFormSwitch={toggleForm}/>
+      } */}
     </div>
   );
 }
