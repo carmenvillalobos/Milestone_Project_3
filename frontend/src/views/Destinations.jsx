@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import NavBar from "../components/NavBar"
-import Cards from "../components/Cards"
 import Card from "react-bootstrap/Card"
+import Button from "react-bootstrap/esm/Button"
 import "../assets/css/Trips.css"
 import "../assets/css/Cards.css"
 
@@ -10,7 +10,7 @@ function DestinationIndex(props) {
 
     useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(`http://localhost:5432/destinations`)
+			const response = await fetch(`http://localhost:3001/destinations`)
 			const resData = await response.json()
 			setDestinations(resData)
 		}
@@ -18,9 +18,15 @@ function DestinationIndex(props) {
 	}, [])
 
     let formattedDestinations = destinations.map((destination) => {
-        return(
-            <div>
-                
+        return (
+            <div className="grid" key={destination.id}>
+                <Card className="box boxes">
+                    <Card.Img src={destination.image} className="card-img"/>
+                    <Card.Body>
+                        <Card.Text className="Title">{destination.location}</Card.Text>
+                        <Button className="book" variant="dark" href="/Destination">View More Info</Button>
+                    </Card.Body>
+                </Card>
             </div>
         )
     })
@@ -34,16 +40,8 @@ function DestinationIndex(props) {
                     <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "45px", padding: "auto"}}>Destinations</h1></Card.Title>
                 </Card>
             </div>
-            <div className='grid justify-content-center'>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
+            <div className='grid'>
+                {formattedDestinations}
             </div>
         </div>
     )
