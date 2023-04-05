@@ -3,7 +3,7 @@ import '../assets/css/Homepage.css'
 
 function NavBar() {
     return(
-        <Navbar className="justify-content-center sticky-top">
+        <Navbar className="nav justify-content-space-between sticky-top">
             <Navbar.Item className="nav">
                 <Navbar.Link className='text home' href='/'>Home</Navbar.Link>
             </Navbar.Item>

@@ -9,11 +9,13 @@
  
 .box {
     margin-left: 35px;
+    margin-right: 35px;
     padding: 25px;
 }
 
 .grid{
     min-height: 100%;
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

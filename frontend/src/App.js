@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './views/Home';
 import Trips from './views/Trips'
 import FavPlaces from './views/FavPlaces';
+import Destination from './views/Destination';
 import Random from './views/Random';
 import Login from './views/Login';
 import SignUp from './views/SignUp';
@@ -25,6 +26,7 @@ function App() {
           <Route path='/Random' element={<Random/>} />
           <Route path='/SignUp' element={<SignUp/>} />
           <Route path='/Login' element={<Login/>} />
+          <Route path='/Destination' element={<Destination/>} />
         </Routes>
       </Router>
       {/* {
