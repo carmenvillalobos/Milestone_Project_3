@@ -10,11 +10,11 @@ function NavBar() {
             <Navbar.Item className="nav">
                 <Navbar.Link className='text' href='/Bookings'>My Trips</Navbar.Link>
             </Navbar.Item>
-            <Navbar.Item className="nav">
+            {/* <Navbar.Item className="nav">
                 <Navbar.Link className='text' href='/Destinations'>Favorite Places</Navbar.Link>
-            </Navbar.Item>
+            </Navbar.Item> */}
             <Navbar.Item className="nav">
-                <Navbar.Link className='text' href='/Random'>Random Getaway</Navbar.Link>
+                <Navbar.Link className='text' href='/Destinations'>All Destinations</Navbar.Link>
             </Navbar.Item>
             {/* Log-in */}
             <Navbar.Item className="nav">
