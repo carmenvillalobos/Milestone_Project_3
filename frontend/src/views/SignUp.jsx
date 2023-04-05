@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card"
 import NavBar from "../components/NavBar"
 import "../assets/css/SignUp.css"
 import { useState } from 'react';
-import axios from 'axios'
+// import axios from 'axios'
 
 function SignUp(props) {
     const [signUp, setSignUp] = useState({
