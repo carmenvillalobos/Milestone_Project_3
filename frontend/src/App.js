@@ -24,7 +24,7 @@ function App() {
           <Route path='/Destinations' element={<DestinationIndex/>} />
           <Route path='/SignUp' element={<SignUp/>} />
           <Route path='/Login' element={<Login/>} />
-          <Route path='/Destination' element={<Destination/>} />
+          <Route path='/Destination/:id' element={<Destination/>} />
         </Routes>
       </Router>
       {/* {
