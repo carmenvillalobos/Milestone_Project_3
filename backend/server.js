@@ -8,11 +8,13 @@ const destinationsController = require('./controllers/destinations_controller')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+var cors = require('cors')
 
 // CONFIGURATION / MIDDLEWARE: Where we configure those dependency packages
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
 
 // DB CONNECTION
 const sequelize = new Sequelize(

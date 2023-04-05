@@ -11,7 +11,8 @@ function DestinationIndex(props) {
     useEffect(() => {
 		const fetchData = async () => {
 			const response = await fetch(`http://localhost:3001/destinations`)
-			const resData = await response.json()
+            const resData = await response.json()
+            console.log(resData)
 			setDestinations(resData)
 		}
 		fetchData()
@@ -24,7 +25,7 @@ function DestinationIndex(props) {
                     <Card.Img src={destination.image} className="card-img"/>
                     <Card.Body>
                         <Card.Text className="Title">{destination.location}</Card.Text>
-                        <Button className="book" variant="dark" href="/Destination">View More Info</Button>
+                        <Button className="book" variant="dark" href={`/Destination/${destination.id}`}>View More Info</Button>
                     </Card.Body>
                 </Card>
             </div>
