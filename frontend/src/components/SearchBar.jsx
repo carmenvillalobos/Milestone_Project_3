@@ -23,7 +23,7 @@ function SearchBar() {
       <Card className="Search border-0">
         <Card.Body>
             <div>
-              <label>
+              <label className="label">
               <div className="day">
                 <p className='title'>
                   Destinations

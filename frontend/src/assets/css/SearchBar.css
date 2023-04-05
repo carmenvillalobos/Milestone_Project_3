@@ -2,27 +2,29 @@
     width: 18rem;
     margin: auto;
     padding: auto;
-    /* margin-left: 350px;*/
     margin-top: 45px;
-    /*margin-bottom: -50px; */
     background-color: transparent;
-    /* z-index: -1; */
+}
+
+.label{
+    width: 100%;
 }
 
 .title{
     color: white;
     font-weight: 500;
     font-size: 30px;
-    margin-left: 48px;
-    margin-bottom: -2px;
+    margin: auto;
+    text-align: center;
 }
 
 .round{
-    margin-left: 28px;
+    width: 100%;
     text-align: center;
 }
 
 .paradise{
-    margin-left: 46px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 8px;
 }
