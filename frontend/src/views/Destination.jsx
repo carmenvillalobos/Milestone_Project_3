@@ -8,7 +8,7 @@ function Destination(props) {
 
     const { id } = useParams()
 
-	const [destination, setDestination] = useState(null)
+	const [destination, setDestination] = useState({})
 
     useEffect(() => {
 		const fetchData = async () => {
