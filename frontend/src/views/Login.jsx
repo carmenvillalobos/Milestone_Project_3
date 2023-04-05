@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import NavBar from "../components/NavBar";
+import Button from "react-bootstrap/Button"
 // import { useNavigate } from "react-router-dom";
 import '../assets/css/login.css'
 
@@ -19,16 +20,16 @@ function Login(props){
     }
 
     return(
-        <div className="main">
+        <div className="background">
             <NavBar/>
             <div className="auth">
                 <h2 className="login-title">Login</h2>
                 <form className="login-form" onSubmit={handleSubmit}>
-                    <label htmlFor="email">Email</label>
-                    <input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder="example@email.com" id="email" name="email"/>
-                    <label htmlFor="password">Password</label>
-                    <input value={pass} onChange={(e) => setPass(e.target.value)} type='password' placeholder="" id="password" name="password"/>
-                    <button type="submit">Log In</button>
+                    <label htmlFor="email"><b>Email</b></label>
+                    <input value={email} className="form-control mb-3" onChange={(e) => setEmail(e.target.value)} type='email' placeholder="example@email.com" id="email" name="email"/>
+                    <label htmlFor="password"><b>Password</b></label>
+                    <input value={pass} className="form-control mb-3" onChange={(e) => setPass(e.target.value)} type='password' placeholder="" id="password" name="password"/>
+                    <Button type="submit">Log In</Button>
                 </form>
                 <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button>
             </div>

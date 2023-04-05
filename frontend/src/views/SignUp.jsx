@@ -17,7 +17,7 @@ function SignUp(props) {
         console.log(signUp)
     }
     return(
-        <div>
+        <div className="background">
             <NavBar/>
             <Card className="container">
             <div>
@@ -69,8 +69,7 @@ function SignUp(props) {
                         className="form-control mb-3"
                         placeholder="Enter Password"/>
                 </div>
-            </form>
-            <div className="mb-4">
+                <div className="buttons">
                 <Button
                     type="button"
                     className="back-btn col-sm-3"
@@ -84,6 +83,8 @@ function SignUp(props) {
                     Submit
                 </Button>
             </div>
+            </form>
+            
             <button className="link-btn" href="/Login">Already have an account? Log in here.</button>
         </Card>
         </div>

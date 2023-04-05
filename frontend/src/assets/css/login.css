@@ -1,22 +1,28 @@
-.main {
-    min-height: 100vh; 
+body{
+    background-color: #E1D9D1;
 }
 
-.auth, .login-form, .register-form {
-    text-align: center;
+.background{
+    background: rgb(84, 84, 63);
+    min-height: 100vh;
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 80px 300px 0 300px;
+    align-items: left;
+    margin: 80px;
 }
 
 .auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 5px;
+    margin: 80px;
     border: 1px solid black;
     border-radius: 15px;
-    /* background-image: linear-gradient(79deg, #ebe9ee, #B2BEB5 48%, #54696e); */
-    background-color: #B2BEB5;
+    background-color: white;
 }
 
 .login-title {

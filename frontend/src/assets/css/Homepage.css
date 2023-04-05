@@ -1,14 +1,16 @@
+.body{
+    background-color: #E1D9D1;
+}
+
 .nav{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 
 .main{
     width: 100%;
     min-height: 100vh;
-    background-color: #E1D9D1; 
- }
+}
  
 .home-img{
      width: 100%;
@@ -29,7 +31,6 @@
 }
 
 .personal{
-    /* margin-left: 110px; */
     text-align: right;
 }
 
