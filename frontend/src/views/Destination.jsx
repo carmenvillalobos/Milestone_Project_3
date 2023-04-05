@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react"
+import { useParams } from "react-router"
 import '../assets/css/Destination.css'
-import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 import NavBar from "../components/NavBar"
 
