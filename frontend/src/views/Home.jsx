@@ -2,7 +2,7 @@ import '../assets/css/Homepage.css'
 import '../assets/css/Cards.css'
 import NavBar from "../components/NavBar"
 import SearchBar from '../components/SearchBar'
-import Cards from '../components/Cards'
+
 
 function Homepage (props){
     return(
@@ -13,15 +13,7 @@ function Homepage (props){
                 <SearchBar/>
             </div>
             <div className='grid justify-content-center'>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
+
             </div>
         </div>
     )

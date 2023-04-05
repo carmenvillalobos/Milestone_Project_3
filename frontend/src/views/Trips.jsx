@@ -1,5 +1,4 @@
 import NavBar from "../components/NavBar"
-import Cards from "../components/Cards"
 import Card from "react-bootstrap/Card"
 import '../assets/css/Trips.css'
 import '../assets/css/Cards.css'
@@ -15,15 +14,6 @@ function Trips(props) {
                 </Card>
             </div>
             <div className='grid justify-content-center'>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
             </div>
         </div>
     )
