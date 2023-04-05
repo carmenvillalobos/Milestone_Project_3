@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react"
+// import { useParams } from "react-router"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button"
 import '../assets/css/Cards.css'
@@ -19,5 +21,3 @@ function Cards() {
 }
 
 export default Cards
-
-// style={{width: '10rem', height: '100px'}}
