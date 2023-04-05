@@ -1,9 +1,6 @@
 // DEPENDENCIES
 const destinations = require('express').Router()
 const { Destination } = require('../models')
-// const db = require('../models')
-// const { Destination } = db
-
 
 //GET ALL destinations
 destinations.get('/', async (req, res) => {
