@@ -32,6 +32,7 @@
 .destination-img{
     min-width: 45%;
     max-height: 60vh;
+    max-width: 50%;
     object-fit: cover;
     border-radius: 5px;
     position: relative;

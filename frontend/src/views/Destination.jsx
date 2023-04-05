@@ -14,6 +14,7 @@ function Destination(props) {
 		const fetchData = async () => {
 			const response = await fetch(`http://localhost:3001/destinations/${id}`)
 			const resData = await response.json()
+            console.log(resData)
 			setDestination(resData)
 		}
 		fetchData()
@@ -22,7 +23,7 @@ function Destination(props) {
     function isAvailable(secured){
         if (secured === "True") {
             return ( 
-                <p>This is avaiable to book</p>
+                <p>This is available to book</p>
             )
         }
         else {
@@ -50,7 +51,7 @@ function Destination(props) {
                 {/* <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p> */}
                 <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>$362 /night</p>
                 {/* <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.price}</p> */}
-                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{isAvailable(`{destination.booking_secured}`)}</p>
+                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{isAvailable(`${destination.booking_secured}`)}</p>
                 <Button className="reserve border col-sm-3" variant="dark" href="/Success">Reserve</Button>
             </div>
             

@@ -1,14 +1,12 @@
 // DEPENDENCIES
 const destinations = require('express').Router()
-// const { Destination } = require('../models')
-const db = require('../models')
-const { Destination } = db
-
+const { Destination } = require('../models')
 
 //GET ALL destinations
 destinations.get('/', async (req, res) => {
     try {
         const foundDestinations = await Destination.findAll()
+        console.log(foundDestinations)
         res.status(200).json(foundDestinations)
     } catch (error) {
         res.status(500).json(error)
