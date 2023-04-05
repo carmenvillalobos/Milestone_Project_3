@@ -5,9 +5,22 @@ body{
     border-radius: 15px ;
     justify-content: center;
     display: flex;
-    height: 80vh;
+    position: relative;
+    top: 40px;
+    height: 100%;
 }
 
 h1{
     text-align: center;
+    margin-top: 15px;
+}
+
+.signup-form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.submit-info{
+    float: right;
 }
