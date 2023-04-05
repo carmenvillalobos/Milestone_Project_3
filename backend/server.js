@@ -7,6 +7,7 @@ const usersController = require('./controllers/users_controller')
 const destinationsController = require('./controllers/destinations_controller')
 const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 // CONFIGURATION / MIDDLEWARE: Where we configure those dependency packages
 app.use(express.json())

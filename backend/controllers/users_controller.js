@@ -1,7 +1,6 @@
 // DEPENDENCIES
 const users = require('express').Router()
 const { User } = require('../models')
-// const jwt = require('jsonwebtoken')
 
 //GET ALL users
 users.get('/', async (req, res) => {
@@ -66,6 +65,9 @@ users.post('/login', async (req, res) => {
     } catch {
         res.status(500).send()
     }
+
+    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
+    res.json({ accessToken: accessToken })
 })
 
 // UPDATE A user
