@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 import '../assets/css/SearchBar.css'
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 
 function SearchBar() {
     const navigate = useNavigate();
@@ -17,15 +16,13 @@ function SearchBar() {
       }
       fetchData()
     }, [])
-  
-    const handleChange = (e) => {
-      e.preventDefault();
-      setDestinations(e.target.value);
-    };
 
-      function handleClick() {
-        navigate('/destination/:id');
-      }
+
+    function handleChange(event) {
+      event.preventDefault();
+      setDestinations(event.target.value);
+      navigate(`/Destination/${event.target.value}`);
+    }
       
 
     return (
@@ -50,7 +47,7 @@ function SearchBar() {
                   </select>
                 </label>
               </div>
-              <Link to={`/${destination.id}`} className="paradise" variant="primary" onClick={handleClick}>Take me to paradise</Link>
+              {/* <Link to={`/${destinations.id}`} className="paradise" variant="primary" onClick={handleChange}>Take me to paradise</Link> */}
             </Card.Body>
             </Card>
             </div>
