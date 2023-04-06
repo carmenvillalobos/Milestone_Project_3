@@ -44,23 +44,23 @@ function Homepage (props){
                         <Card className="box boxes">
                             <Card.Img src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWwlMjBhY2NvbW9kYXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="hotel room" className="card-img"/>
                             <Card.Body>
-                                <Card.Text className="Title">Affordable accommodations & more</Card.Text>
+                                <Card.Text className="Title">Affordable accommodations</Card.Text>
                             </Card.Body>
                         </Card>
                 </div>
                 <div className="grid">
                         <Card className="box boxes">
-                            <Card.Img src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWwlMjBhY2NvbW9kYXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="hotel room" className="card-img"/>
+                            <Card.Img src='https://plus.unsplash.com/premium_photo-1667512810276-60e3eeaefd06?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnJhemlsJTIwY2Fybml2YWx8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60' alt="hotel room" className="card-img"/>
                             <Card.Body>
-                                <Card.Text className="Title">Affordable accommodations & more</Card.Text>
+                                <Card.Text className="Title">Make new friends</Card.Text>
                             </Card.Body>
                         </Card>
                 </div>
                 <div className="grid">
                         <Card className="box boxes">
-                            <Card.Img src='https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWwlMjBhY2NvbW9kYXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="hotel room" className="card-img"/>
+                            <Card.Img src='https://images.unsplash.com/photo-1628690920311-a820459457ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGFyYXNhaWxpbmd8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=1030&q=60' alt="hotel room" className="card-img"/>
                             <Card.Body>
-                                <Card.Text className="Title">Affordable accommodations & more</Card.Text>
+                                <Card.Text className="Title">Experinces of a lifetime</Card.Text>
                             </Card.Body>
                         </Card>
                 </div>
