@@ -15,10 +15,7 @@ function Trips(props) {
                 </Card>
             </div>
             <div className='grid pop-cards justify-content-center'>
-                <Cards/>
-                <Cards/>
-                <Cards/>
-                <Cards/>
+                
             </div>
         </div>
     )
