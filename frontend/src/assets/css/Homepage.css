@@ -5,6 +5,22 @@
 .nav{
     display: flex;
     flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.personal{
+    text-align: right;
+    margin-right: 0;
+}
+
+.home{
+    margin-left: auto;
 }
 
 .main{
@@ -35,11 +51,7 @@
     justify-content: center;
 }
 
-.personal{
-    text-align: right;
-}
+@media (min-width: 600){
 
-.home{
-    margin-left: 255px;
 }
  
