@@ -13,13 +13,13 @@
 }
  
 .home-img{
-     width: 100%;
-     height: 50vh;
-     object-fit: cover;
-     position:absolute;
-     filter: brightness(0.4);
-     top: 0;
-     left: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position:absolute;
+    filter: brightness(0.4);
+    top: 0;
+    left: 0;
 }
  
 .grid{
@@ -27,7 +27,11 @@
 }
 
 .text{
-     color: white;
+    color: white;
+}
+
+.view-all{
+    justify-content: center;
 }
 
 .personal{

@@ -31,7 +31,8 @@ function Login(props){
                     <input value={pass} className="form-control mb-3" onChange={(e) => setPass(e.target.value)} type='password' placeholder="" id="password" name="password"/>
                     <Button type="submit">Log In</Button>
                 </form>
-                <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button>
+                {/* <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button> */}
+                <button className="link-btn">Don't have an account? Register here.</button>
             </div>
         </div>
     )

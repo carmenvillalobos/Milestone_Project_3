@@ -2,6 +2,8 @@ import '../assets/css/Homepage.css'
 import '../assets/css/Cards.css'
 import NavBar from "../components/NavBar"
 import SearchBar from '../components/SearchBar'
+import Cards from '../components/Cards'
+import Button from "react-bootstrap/Button"
 
 
 function Homepage (props){
@@ -13,8 +15,15 @@ function Homepage (props){
                 <SearchBar/>
             </div>
             <div className='grid justify-content-center'>
-
+                <Cards/>
+                <Cards/>
+                <Cards/>
+                <Cards/>
             </div>
+            <div className="grid">
+                <Button className="view-all" variant="dark" href="/Destinations">View our locations</Button>
+            </div>
+            
         </div>
     )
 }
