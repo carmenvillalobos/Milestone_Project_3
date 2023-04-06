@@ -1,5 +1,6 @@
 import NavBar from "../components/NavBar"
 import Card from "react-bootstrap/Card"
+import Cards from '../components/Cards'
 import '../assets/css/Trips.css'
 import '../assets/css/Cards.css'
 
@@ -13,7 +14,11 @@ function Trips(props) {
                     <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "45px", padding: "auto"}}>My Trips</h1></Card.Title>
                 </Card>
             </div>
-            <div className='grid justify-content-center'>
+            <div className='grid pop-cards justify-content-center'>
+                <Cards/>
+                <Cards/>
+                <Cards/>
+                <Cards/>
             </div>
         </div>
     )
