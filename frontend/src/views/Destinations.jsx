@@ -36,9 +36,9 @@ function DestinationIndex(props) {
         <div className='main'>
             <NavBar/>
             <div>
-                <img className="fav-img" src="https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=400&q=60" alt="waterfront"/>
+                <img className="fav-img" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=1035&q=60" alt="waterfront"/>
                 <Card className="Trips border-0 mb-2">
-                    <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "45px", padding: "auto"}}>Destinations</h1></Card.Title>
+                    <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "20px", padding: "auto"}}>Destinations</h1></Card.Title>
                 </Card>
             </div>
             <div className='grid'>
