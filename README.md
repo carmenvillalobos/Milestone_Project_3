@@ -1,3 +1,18 @@
+# What is our application about?
+Our application is a travel booking site where users can create their own account and book trips to a list of destinations.
+
+# What is the inspiration of our application?
+The inspiration of our application was to create a site where users can create their own account through user authentication and reserve specific locations to their account that they would like to travel to.
+
+# Which languages, frameworks, libraries, and database did we use?
+- Languages: Javascript/JSX, SQL
+- Frameworks: React, Express.js
+- Libraries: Node.js
+- Database: PostgreSQL
+
+# What bugs exist in our application that we still have not fixed?
+- A bug that exists in our application is being able to successfully allow a user to create an account and add a trip to their personal account
+
 # How we set up our database to our application 
 1) Create a backend folder 
 2) Install the following dependencies to create a package-lock.json & package.json for the backend folder:
