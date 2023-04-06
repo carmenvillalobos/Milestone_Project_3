@@ -25,31 +25,56 @@ users.get('/:id', async (req, res) => {
     }
 })
 
-// CREATE A user
-// users.post('/', async (req, res) => {
-//     try {
-//         const newUser = await User.create(req.body)
-//         res.status(200).json({
-//             message: 'Successfully inserted a new user',
-//             data: newUser
-//         })
-//     } catch(err) {
-//         res.status(500).json(err)
-//     }
-// })
-
-// CREATE a user with a hashed password
+//CREATE A user
 users.post('/', async (req, res) => {
     try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10)
-        const user = { username: req.body.username, password: hashedPassword }
-        // users.push(user) //do i need to include this piece of code or how can I change it so that this updates the table in the database?
-        res.status(201).send()
-    } catch {
-        res.status(500).send()
+        const newUser = await User.create(req.body)
+        res.status(200).json({
+            message: 'Successfully inserted a new user',
+            data: newUser
+        })
+    } catch(err) {
+        res.status(500).json(err)
     }
 })
 
+// CREATE a user with a hashed password
+// users.post('/', async (req, res) => {
+//     try {
+//         const hashedPassword = await bcrypt.hash(req.body.password, 10)
+//         const user = { username: req.body.username, password: hashedPassword }
+//         // users.push(user) //do i need to include this piece of code or how can I change it so that this updates the table in the database?
+//         res.status(201).send()
+//     } catch {
+//         res.status(500).send()
+//     }
+// })
+
+//Generate a token here
+function generateToken(user) {
+    const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+    return token;
+  }
+
+//Verify the token
+function verifyToken(req, res, next) {
+    //reading the token to see if it's authorized or not
+    const authHeader = req.headers.authorization;
+  
+    if (!authHeader) {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
+  
+    const token = authHeader.split(' ')[1];
+  
+    try {
+      const decoded = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+      req.user = {id: users.id};
+      next();
+    } catch (error) {
+      res.status(401).json({ message: 'Unauthorized' });
+    }
+  }
 //LOGIN a particular user (checking that the username and password match up!)
 users.post('/login', async (req, res) => {
     const user = users.find(user => user.username === req.body.username)
@@ -66,8 +91,8 @@ users.post('/login', async (req, res) => {
         res.status(500).send()
     }
 
-    const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET)
-    res.json({ accessToken: accessToken })
+    const token = generateToken(user)
+    res.json({ token })
 })
 
 // UPDATE A user

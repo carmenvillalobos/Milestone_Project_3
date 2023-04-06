@@ -1,18 +1,27 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import '../assets/css/SearchBar.css'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function SearchBar() {
     const navigate = useNavigate();
-    const [searchInput, setSearchInput] = useState({});
+    const [destinations, setDestinations] = useState([])
 
+    useEffect(() => {
+      const fetchData = async () => {
+        const response = await fetch(`http://localhost:3001/destinations`)
+              const resData = await response.json()
+              console.log(resData)
+        setDestinations(resData)
+      }
+      fetchData()
+    }, [])
   
-      const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
-      };
+    const handleChange = (e) => {
+      e.preventDefault();
+      setDestinations(e.target.value);
+    };
 
       function handleClick() {
         navigate('/destination/:id');
@@ -20,27 +29,32 @@ function SearchBar() {
       
 
     return (
-      <Card className="Search border-0">
-        <Card.Body>
-            <div>
-              <label className="label">
-              <div className="day">
-                <p className='title'>
-                  Destinations
-                </p>
+        <div>
+        <Card className="Search border-0">
+            <Card.Body>
+                <div>
+                  <label className="label">
+                  <div className="day">
+                    <p className='title'>
+                      Destinations
+                    </p>
+                  </div>
+                  <select 
+                    onChange={handleChange}
+                    className="round" 
+                    name="day">
+                      <option disabled selected value>  Select A Destination  </option>
+                      {destinations.map(destination => (
+          <option key={destination.id} value={destination.id}>{destination.location}</option>
+        ))}
+                  </select>
+                </label>
               </div>
-              <select 
-                onChange={handleChange}
-                className="round" 
-                name="day">
-                  <option disabled selected value>  Select A Destination  </option>
-                  {/* <option value="location">{destination.location}</option> */}
-              </select>
-            </label>
-          </div>
-          <Button className="paradise" variant="primary" onClick={handleClick}>Take me to paradise</Button>
-        </Card.Body>
-      </Card>
+              <Link to={`/${destination.id}`} className="paradise" variant="primary" onClick={handleClick}>Take me to paradise</Link>
+            </Card.Body>
+            </Card>
+            </div>
+      
     );
   }
 
