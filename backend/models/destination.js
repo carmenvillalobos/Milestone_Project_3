@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     location: DataTypes.STRING,
     image: DataTypes.STRING,
-    booking_secured: DataTypes.BOOLEAN,
-    account_id: DataTypes.STRING,
+    description: DataTypes.BOOLEAN,
+    price: DataTypes.INTEGER,
     created_at: DataTypes.DATE,
     updated_at: DataTypes.DATE,
   }, {
