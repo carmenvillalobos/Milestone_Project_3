@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar"
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button"
 import "../assets/css/Trips.css"
+import "../assets/css/Homepage.css"
 import "../assets/css/Cards.css"
 
 function DestinationIndex(props) {
@@ -41,7 +42,7 @@ function DestinationIndex(props) {
                     <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "20px", padding: "auto"}}>Destinations</h1></Card.Title>
                 </Card>
             </div>
-            <div className='grid'>
+            <div className='grid pop-cards'>
                 {formattedDestinations}
             </div>
         </div>
