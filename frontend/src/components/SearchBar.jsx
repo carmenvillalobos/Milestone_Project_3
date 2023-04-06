@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 import '../assets/css/SearchBar.css'
 import { useNavigate, Link} from 'react-router-dom';
 
@@ -42,12 +43,12 @@ function SearchBar() {
                     name="day">
                       <option disabled selected value>  Select A Destination  </option>
                       {destinations.map(destination => (
-          <option key={destination.id} value={destination.id}>{destination.location}</option>
-        ))}
+                        <option key={destination.id} value={destination.id}>{destination.location}</option>
+                      ))}
                   </select>
                 </label>
               </div>
-              {/* <Link to={`/${destinations.id}`} className="paradise" variant="primary" onClick={handleChange}>Take me to paradise</Link> */}
+              <Button href={`/${destinations.id}`} className="paradise" variant="primary" onClick={handleChange}>Take me to paradise</Button>
             </Card.Body>
             </Card>
             </div>

@@ -12,7 +12,15 @@ function NavBar() {
 
   return (
     <Navbar  className="sticky-top transparent" collapseOnSelect expand="lg" variant="dark">
-      <Navbar.Brand className="left" href="/">PlanRight</Navbar.Brand>
+       <Navbar.Brand href="/">
+            <img
+              alt=""
+              src="https://image.similarpng.com/very-thumbnail/2021/08/Illustration-of-Travel-agency-logo-design-template-on-transparent-background-PNG.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top left"
+            />{' '}
+          </Navbar.Brand>
       <Navbar.Toggle className="right text" aria-controls="responsive-navbar-nav" onClick={handleToggle}>
         {expanded ? <MdClose /> : <FaBars />}
       </Navbar.Toggle>

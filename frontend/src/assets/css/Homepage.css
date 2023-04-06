@@ -14,21 +14,22 @@
 }
  
 .home-img{
-     width: 100%;
-     height: 50vh;
-     object-fit: cover;
-     position:absolute;
-     filter: brightness(0.4);
-     top: 0;
-     left: 0;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    position:absolute;
+    filter: brightness(0.4);
+    top: 0;
+    left: 0;
 }
  
 .grid{
     height: 100%;
+    margin-top: 20px;
 }
 
 .text{
-     color: white;
+    color: white;
 }
 
 .left{
@@ -45,5 +46,11 @@
 
 .transparent{
     background-color: rgba(0, 0, 0,.4)
+}
+
+.view-all{
+    justify-content: center;
+}
+@media (min-width: 600){
 }
  

@@ -1,3 +1,55 @@
+# What is our application about?
+Our application is a travel booking site where users can create their own account and book trips to a list of destinations.
+
+# What is the inspiration of our application?
+The inspiration of our application was to create a site where users can create their own account through user authentication and reserve specific locations to their account that they would like to travel to.
+
+# Which languages, frameworks, libraries, and database did we use?
+- Languages: Javascript/JSX, SQL
+- Frameworks: React, Express.js
+- Libraries: Node.js
+- Database: PostgreSQL
+
+# What do our tables look like?
+Users Table
+
+| id | username | password | email |
+| ------ | ------------------------------------- | ----------------------------- | ------ |
+| 1 | test | password | test@gmail.com  |
+
+Destinations Table
+
+| id | location| image | description | price |
+| ------ | ------------------------------------- | ----------------------------- | ------ | ------ |
+| 17 | Rio de Janerio, Brazil | `https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmlvJTIwZGUlMjBqYW5laXJvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60` | Rio de Janeiro is the second largest city in Brazil, on the South Atlantic coast. Rio is famous for its breathtaking landscape, its laid-back beach culture and its annual carnival. The "Carioca Landscapes between the Mountain and the Sea" has been inscribed on the UNESCO World Heritage list. | 371 |
+| 18 | Sydney, Australia | `https://images.unsplash.com/photo-1551352912-484163ad5be9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3lkbmV5JTIwYXVzdHJhbGlhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60` | Sydney is the Harbour City, and is the largest, oldest and most cosmopolitan city in Australia with an enviable reputation as one of the world's most beautiful and livable cities. Brimming with history, nature, culture, art, fashion, cuisine and design, it is set next to miles of ocean coastline and sandy surf beaches. The city is also home to the Sydney Opera House and the Sydney Harbour Bridge, two of the most iconic structures on the planet. The gateway to Australia, it lies on the deepest natural harbour in the world and stretches for 140 kilometres Sydney is a major global city and an important finance centre in the Asia-Pacific region. The city is surrounded by nature and national parks, which extend through the suburbs and right to the shores of the harbour. | 371 |
+| 19 | Machu Picchu, Peru| `https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjaHUlMjBwaWNjaHV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60` | Machu Picchu is the site of an ancient Inca city, high in the Andes of Peru. At 2,430 metres (8,000 ft) above sea level, this  UNESCO World Heritage Site is often referred to as “The Lost City of the Incas”, is one of the most familiar symbols of the Incan Empire, and is one of the most famous and spectacular sets of ruins in the world. | `https://images.unsplash.com/photo-1530968033775-2c92736b131e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9yYWNheXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60` | Boracay is a tropical island about an hour's flight from Metro Manila in the Philippines. It has superb long white sand beaches and is one of the country's most developed tourist destinations. White Beach, Boracay placed 2nd in Condé Nast Traveler's 25 Best Island Beaches in the World: Readers' Choice Awards in 2020. | 371 |
+| 21 | San Jose, Costa Rica | `https://images.unsplash.com/photo-1629337451443-3a43721f196b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FuJTIwam9zZSUyMGNvc3RhJTIwcmljYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60` | San José is the capital and largest city of Costa Rica. The undisputed cultural and economic center of Costa Rica's central valley, where most of the population lives, San José is also the most important transportation hub for domestic travel even though the international airport is in Alajuela. Many international visitors bypass San José altogether or spend only the time it takes to change from one bus to another, but its museums, cultural output and the opportunity to meet the "real Costa Rica" make it well worth staying a few days. | 371 |
+| 22 | Tokyo, Japan | `https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dG9reW98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60` | Tokyo is the enormous and wealthy capital of Japan, and also its main city, overflowing with culture, commerce, and most of all, people. As the most populated urban area in the world, Tokyo is a fascinating and dynamic metropolis that mixes foreign influences, consumer culture and global business along with remnants of the capital of old Japan. From modern electronics and gleaming skyscrapers to cherry blossoms and the Imperial Palace, this city represents the entire sweep of Japanese history and culture. Tokyo truly has something for every traveller.| 371 |
+
+
+# What do our routes look like?
+
+| Method | Path | Purpose |
+| ------ | ------------------------------------- | ----------------------------- |
+| GET | `/` | The home page |
+| GET | `/Destinations` | Index page listing all destinations |
+| GET | `/Destinations/:id` | Index page that lists 1 specific destination |
+| GET | `/Bookings` | View all your trips |
+| POST | `/Login` | Login into your personal account |
+| POST | `/SignUp` | Create an account |
+
+# What bugs exist in our application that we still have not fixed?
+- A bug that exists in our application is being able to successfully allow a user to create an account and add a trip to their personal account
+
+# What resources did we use to help create our application?
+- https://react.dev/
+- https://sequelize.org/
+- https://unsplash.com/
+- https://en.wikivoyage.org/wiki/Main_Page
+- pgAdmin
+- Postman
+
 # How we set up our database to our application 
 1) Create a backend folder 
 2) Install the following dependencies to create a package-lock.json & package.json for the backend folder:
@@ -19,8 +71,8 @@
     - command: npx sequelize init (this CLI command generates an empty Sequelize project into your app; note: I created a folder named sequelize and installed the empty project there for organizational purposes since we are using other languages within this app)
 4) Create the models and run a migration on what you will be using for your database:
     - in our case, I typed the following to create two tables (one for the users and another for the destinations):
-        - npx sequelize-cli model:generate --name Users --attributes username:string,password:string, first_name:string,last_name:string,email:string
-        - npx sequelize-cli model:generate --name Destinations --attributes location:string,image:string, booking_secured:boolean,account_id:string
+        - npx sequelize-cli model:generate --name Users --attributes username:string,password:string,first_name:string,last_name:string,email:string
+        - npx sequelize-cli model:generate --name Destinations --attributes location:string,image:string,description:string,price:integer
     - Note that we did not include an id for any columns since this cli command makes automatically creates an id column
 5) Create an empty database on pgAdmin 4
 6) Run a migration
