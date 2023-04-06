@@ -19,8 +19,8 @@
     - command: npx sequelize init (this CLI command generates an empty Sequelize project into your app; note: I created a folder named sequelize and installed the empty project there for organizational purposes since we are using other languages within this app)
 4) Create the models and run a migration on what you will be using for your database:
     - in our case, I typed the following to create two tables (one for the users and another for the destinations):
-        - npx sequelize-cli model:generate --name Users --attributes username:string,password:string, first_name:string,last_name:string,email:string
-        - npx sequelize-cli model:generate --name Destinations --attributes location:string,image:string, booking_secured:boolean,account_id:string
+        - npx sequelize-cli model:generate --name Users --attributes username:string,password:string,first_name:string,last_name:string,email:string
+        - npx sequelize-cli model:generate --name Destinations --attributes location:string,image:string,description:string,price:integer
     - Note that we did not include an id for any columns since this cli command makes automatically creates an id column
 5) Create an empty database on pgAdmin 4
 6) Run a migration

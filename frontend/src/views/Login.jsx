@@ -1,23 +1,31 @@
 import React, { useState } from "react"
 import NavBar from "../components/NavBar";
 import Button from "react-bootstrap/Button"
-// import { useNavigate } from "react-router-dom";
 import '../assets/css/login.css'
+import axios from 'axios';
 
 function Login(props){
-    // let navigate = useNavigate();
-    // const routeChange = () => { 
-    //     let path = `newPath`; 
-    //     navigate('/');
-    //   }
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [message, setMessage] = useState('')
 
-    const [email, setEmail] = useState('');
-    const [pass, setPass] = useState('');
-
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email);
+    
+
+    try {
+        const response = await axios.post('http://localhost:3001/login', {
+        email,  
+        password,
+        })
+  
+        localStorage.setItem('token', response.data.token);
+        setMessage('Login successful!');
+      } catch (error) {
+        setMessage('Invalid email or password.');
+      }
     }
+
 
     return(
         <div className="background">
@@ -28,11 +36,11 @@ function Login(props){
                     <label htmlFor="email"><b>Email</b></label>
                     <input value={email} className="form-control mb-3" onChange={(e) => setEmail(e.target.value)} type='email' placeholder="example@email.com" id="email" name="email"/>
                     <label htmlFor="password"><b>Password</b></label>
-                    <input value={pass} className="form-control mb-3" onChange={(e) => setPass(e.target.value)} type='password' placeholder="" id="password" name="password"/>
+                    <input value={password} className="form-control mb-3" onChange={(e) => setPassword(e.target.value)} type='password' placeholder="" id="password" name="password"/>
                     <Button type="submit">Log In</Button>
                 </form>
-                {/* <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button> */}
-                <button className="link-btn">Don't have an account? Register here.</button>
+                <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button>
+                <p>{message}</p>
             </div>
         </div>
     )
