@@ -61,9 +61,9 @@ function Destination(props) {
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Woohoo!</Modal.Title>
+                    <Modal.Title>Congrats!</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Congrats and pack your bags! You're going to {destination.location}</Modal.Body>
+                <Modal.Body>Pack your bags, because you're going to {destination.location}! Woohoo!</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>Close</Button>
                     <Button variant="primary" onClick={handleClose} href="/Bookings">See all reservations</Button>
