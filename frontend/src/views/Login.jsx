@@ -37,9 +37,9 @@ function Login(props){
                     <input value={email} className="form-control mb-3" onChange={(e) => setEmail(e.target.value)} type='email' placeholder="example@email.com" id="email" name="email"/>
                     <label htmlFor="password"><b>Password</b></label>
                     <input value={password} className="form-control mb-3" onChange={(e) => setPassword(e.target.value)} type='password' placeholder="" id="password" name="password"/>
-                    <Button type="submit">Log In</Button>
+                    <Button type="submit" href="/">Log In</Button>
                 </form>
-                <button className="link-btn" onClick={() => props.onFormSwitch('signUp')}>Don't have an account? Register here.</button>
+                <button className="link-btn border-0" href="/Signup">Don't have an account? Register here.</button>
                 <p>{message}</p>
             </div>
         </div>

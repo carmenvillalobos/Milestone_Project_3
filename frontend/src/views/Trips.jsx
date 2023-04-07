@@ -20,7 +20,5 @@ function Trips(props) {
         </div>
     )
 }
-// width: 18rem;
-//     margin-top: 45px;
-//     background-color: transparent;
+
 export default Trips

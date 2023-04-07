@@ -79,7 +79,7 @@ function SignUp(props) {
                 <Button
                     type="submit"
                     className="submit-info col-sm-3"
-                    href="/">
+                    href="/Login">
                     Submit
                 </Button>
             </div>
