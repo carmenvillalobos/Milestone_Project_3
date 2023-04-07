@@ -25,7 +25,8 @@
  
 .grid{
     height: 100%;
-    margin-top: 20px;
+    margin-top: 45px;
+    margin-bottom: -80px;
 }
 
 .text{
@@ -52,4 +53,13 @@
     justify-content: center;
 }
 
- 
+@media (min-height: 900px) {
+    .grid{
+      margin-top: 125px;
+    }
+}
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .grid{
+
+    }
+} */
