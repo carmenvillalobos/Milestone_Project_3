@@ -37,10 +37,11 @@ function Destination(props) {
                     <img className="destination-img" src={destination.image} alt={destination.location}/>
                 </div>
 
-            <div className="destination-descriptionc">
-                <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
-                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>${destination.price} / night</p>
-                <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
+                <div className="destination-descriptionc">
+                    <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
+                    <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>${destination.price} / night</p>
+                    <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
+                </div>
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -52,7 +53,7 @@ function Destination(props) {
                     <Button variant="primary" onClick={handleClose} href="/Bookings">See all reservations</Button>
                 </Modal.Footer>
             </Modal>
-            </div>
+            
         </div>
     )
 }
