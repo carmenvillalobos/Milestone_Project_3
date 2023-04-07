@@ -60,7 +60,7 @@ function Homepage (props){
                         <Card className="box boxes">
                             <Card.Img src='https://images.unsplash.com/photo-1628690920311-a820459457ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGFyYXNhaWxpbmd8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=1030&q=60' alt="hotel room" className="card-img"/>
                             <Card.Body>
-                                <Card.Text className="Title">Experinces of a lifetime</Card.Text>
+                                <Card.Text className="Title">Experiences of a lifetime</Card.Text>
                             </Card.Body>
                         </Card>
                 </div>
