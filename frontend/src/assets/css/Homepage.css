@@ -26,7 +26,7 @@
 .grid{
     height: 100%;
     /* margin-top: 30px; */
-    margin-bottom: -55px;
+    /* margin-bottom: -55px; */
 }
 
 .text{
@@ -55,4 +55,9 @@
 
 .homeImgContainer {
     height: calc(50vh - 104px);
+}
+
+.pop-cards{
+    margin-top: -100px;
+    margin-bottom: 100px;
 }
