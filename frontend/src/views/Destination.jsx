@@ -25,20 +25,6 @@ function Destination(props) {
 		fetchData()
 	}, [id])
 
-    function isAvailable(secured){
-        if (secured === "True") {
-            return ( 
-                <p>This is available to book</p>
-            )
-        }
-        else {
-            return(
-                <p>This is currently not available to book</p>
-            )
-        }
-    }
-
-
     return(
         <div className='flex-box'>
 
@@ -54,7 +40,6 @@ function Destination(props) {
             <div className="destination-descriptionc">
                 <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
                 <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>${destination.price} / night</p>
-                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{isAvailable(`${destination.booking_secured}`)}</p>
                 <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
             </div>
             <Modal show={show} onHide={handleClose}>
