@@ -77,24 +77,17 @@ function verifyToken(req, res, next) {
   }
 
 //LOGIN a particular user (checking that the username and password match up!)
-users.post('/login', async (req, res) => {
-    const user = users.find(user => users.email === req.body.email)
+users.post('/login', (req, res) => {
+    const { email, password } = req.body;
+    const user = users.find((u) => u.email === email)
+
+    if (!user || user.password !== password) {
+        return res.status(401).json({ message: 'Invalid email or password' });
+      }
     
-    const token = generateToken(user)
-    res.json({ token })
-    if (user == null) {
-        return res.status(400).send('Cannot find user')
-    }
-    try {
-        if(await bcrypt.compare(req.body.password, user.password)) {
-           res.send('Success') 
-        } else {
-            res.send('Not allowed.')
-        }
-    } catch {
-        res.status(500).send()
-    }
-})
+      const token = generateToken(user);
+      res.json({ token });
+    })
 
 // UPDATE A user
 users.put('/:id', async (req, res) => {
