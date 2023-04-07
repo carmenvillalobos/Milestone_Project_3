@@ -31,11 +31,11 @@ function Destination(props) {
             <div className="a">
                 <NavBar/>
             </div>
-            
-            <div className="destination-cardb">
-                <p className="name" style={{color: "black"}}>{destination.location}</p>
-                <img className="destination-img" src={destination.image} alt={destination.location}/>
-            </div>
+            <div className="flex-box">
+                <div className="destination-cardb">
+                    <p className="name" style={{color: "black"}}>{destination.location}</p>
+                    <img className="destination-img" src={destination.image} alt={destination.location}/>
+                </div>
 
             <div className="destination-descriptionc">
                 <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
@@ -52,7 +52,7 @@ function Destination(props) {
                     <Button variant="primary" onClick={handleClose} href="/Bookings">See all reservations</Button>
                 </Modal.Footer>
             </Modal>
-            
+            </div>
         </div>
     )
 }
