@@ -42,6 +42,9 @@ Destinations Table
 
 # What bugs exist in our application that we still have not fixed?
 - A bug that exists in our application is being able to successfully allow a user to create an account and add a trip to their personal account
+- For the signin and login page, the hyperlinks at the bottom don't work
+- The signup form button isn't publishing to our backend. Ideally, when you submit your signup form, the app redirects ts you to the login page so that you could login. Once you hit the login button, the app will redirect you to the home page where you are greeted by your name.
+- When you click on the reserve button on the individual destination page, it does not add the trip to the "My Trips" view page.
 
 # What resources did we use to help create our application?
 - https://react.dev/

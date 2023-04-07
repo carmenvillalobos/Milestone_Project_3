@@ -48,7 +48,7 @@ function SearchBar() {
                   </select>
                 </label>
               </div>
-              <Button href={`/${destinations.id}`} className="paradise" variant="primary" onClick={handleChange}>Take me to paradise</Button>
+              {/* <Button href={`/${destinations.id}`} className="paradise" variant="primary" onClick={handleChange}>Take me to paradise</Button> */}
             </Card.Body>
             </Card>
             </div>
