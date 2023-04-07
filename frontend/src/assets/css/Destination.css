@@ -32,16 +32,17 @@
 .destination-img{
     min-width: 45%;
     max-height: 60vh;
-    max-width: 50%;
+    width: 400px;
     object-fit: cover;
     border-radius: 5px;
     position: relative;
-    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
     left: 0;
 }
 
 .destination-descriptionc{
-    padding: 5%;
+    padding: 25px;
     flex-direction: column;
     text-align: center;
     flex: 1;

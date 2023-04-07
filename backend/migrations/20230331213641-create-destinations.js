@@ -15,11 +15,11 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
-      booking_secured: {
-        type: Sequelize.BOOLEAN
-      },
-      account_id: {
+      description: {
         type: Sequelize.STRING
+      },
+      price: {
+        type: Sequelize.INTEGER
       },
       created_at: {
         allowNull: false,
