@@ -75,9 +75,13 @@ function verifyToken(req, res, next) {
       res.status(401).json({ message: 'Unauthorized' });
     }
   }
+
 //LOGIN a particular user (checking that the username and password match up!)
 users.post('/login', async (req, res) => {
-    const user = users.find(user => user.username === req.body.username)
+    const user = users.find(user => users.email === req.body.email)
+    
+    const token = generateToken(user)
+    res.json({ token })
     if (user == null) {
         return res.status(400).send('Cannot find user')
     }
@@ -90,9 +94,6 @@ users.post('/login', async (req, res) => {
     } catch {
         res.status(500).send()
     }
-
-    const token = generateToken(user)
-    res.json({ token })
 })
 
 // UPDATE A user
