@@ -1,6 +1,8 @@
 // DEPENDENCIES
 const users = require('express').Router()
 const { User } = require('../models')
+const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 //GET ALL users
 users.get('/', async (req, res) => {
@@ -77,15 +79,18 @@ function verifyToken(req, res, next) {
   }
 
 //LOGIN a particular user (checking that the username and password match up!)
-users.post('/login', (req, res) => {
+users.post('/login', async (req, res) => {
     const { email, password } = req.body;
-    const user = users.find((u) => u.email === email)
+    const user = await User.findOne({ where: {email: email}})
 
-    if (!user || user.password !== password) {
+    if (!user || user.password.toLowerCase() !== password.toLowerCase()) {
         return res.status(401).json({ message: 'Invalid email or password' });
       }
     
-      const token = generateToken(user);
+      const token = generateToken({
+        email: user.email, 
+        password: email.password
+    });
       res.json({ token });
     })
 
