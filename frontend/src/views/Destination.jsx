@@ -31,10 +31,12 @@ function Destination(props) {
             <div className="a">
                 <NavBar/>
             </div>
-            <div className="flex-box">
+            <div className="flex-box row">
                 <div className="destination-cardb">
-                    <p className="name" style={{color: "black"}}>{destination.location}</p>
-                    <img className="destination-img" src={destination.image} alt={destination.location}/>
+                <p className="name" style={{color: "black"}}>Machu Picchu, Peru</p>
+                    <img className="destination-img" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjaHUlMjBwaWNjaHV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" alt={destination.location}/>
+                    {/* <p className="name" style={{color: "black"}}>{destination.location}</p>
+                    <img className="destination-img" src={destination.image} alt={destination.location}/> */}
                 </div>
 
                 <div className="destination-descriptionc">

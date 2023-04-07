@@ -74,7 +74,7 @@ function SignUp(props) {
                     type="button"
                     className="back-btn col-sm-3"
                     href="/">
-                    Back to homepage
+                    Home
                 </Button>
                 <Button
                     type="submit"

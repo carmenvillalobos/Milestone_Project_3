@@ -61,7 +61,11 @@
 @media (min-width: 600px) {
     .flex-box {
       flex-direction: row;
-      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .destination-cardb{
+        justify-content: center;
     }
 }
 
