@@ -40,7 +40,7 @@ function Destination(props) {
 
 
     return(
-        <div className='flex-box'>
+        <div>
 
             <div className="a">
                 <NavBar/>

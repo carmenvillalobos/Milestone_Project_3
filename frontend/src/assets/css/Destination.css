@@ -50,6 +50,7 @@
     border-radius: 5px;
     background-color: rgb(58, 53, 53);
     justify-content: space-evenly;
+    margin: auto;
 }
 
 .reserve{
@@ -63,8 +64,8 @@
       flex-wrap: wrap;
     }
     /* .destination-descriptionc{
-        margin-right: 20px;
-        margin-bottom: 20px;
+        
+        margin: 50%;
     } */
 }
 
