@@ -10,7 +10,6 @@ function Cards() {
                 <Card.Body>
                     <Card.Text className="Title">Yosemite, California</Card.Text>
                     <Button className="book" variant="dark" href="/Destination">Book Trip</Button>
-                    <Button className="favorite" variant="dark">Add to Favorites</Button>
                 </Card.Body>
             </Card>
         </div>

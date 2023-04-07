@@ -45,19 +45,20 @@ function Destination(props) {
             <div className="a">
                 <NavBar/>
             </div>
-            
-            <div className="destination-cardb">
-                <p className="name" style={{color: "black"}}>{destination.location}</p>
-                <img className="destination-img" src={destination.image} alt={destination.location}/>
-            </div>
+            <div className="flex-box">
+                <div className="destination-cardb">
+                    <p className="name" style={{color: "black"}}>{destination.location}</p>
+                    <img className="destination-img" src={destination.image} alt={destination.location}/>
+                </div>
 
-            <div className="destination-descriptionc">
-                <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>Yes plz wolf bitters letterpress. Pok pok activated charcoal neutra poutine hammock mixtape. Tofu shaman freegan, austin dreamcatcher cardigan readymade franzen wolf bushwick. Gorpcore sustainable photo booth pinterest kinfolk skateboard ennui la croix cornhole lyft organic four dollar toast distillery fingerstache fanny pack. Chartreuse waistcoat keffiyeh you probably haven't heard of them salvia lo-fi marfa microdosing.</p> 
-                {/* <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p> */}
-                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>$362 / night</p>
-                {/* <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.price} / night</p> */}
-                <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{isAvailable(`${destination.booking_secured}`)}</p>
-                <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
+                <div className="destination-descriptionc">
+                    <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>Yes plz wolf bitters letterpress. Pok pok activated charcoal neutra poutine hammock mixtape. Tofu shaman freegan, austin dreamcatcher cardigan readymade franzen wolf bushwick. Gorpcore sustainable photo booth pinterest kinfolk skateboard ennui la croix cornhole lyft organic four dollar toast distillery fingerstache fanny pack. Chartreuse waistcoat keffiyeh you probably haven't heard of them salvia lo-fi marfa microdosing.</p> 
+                    {/* <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p> */}
+                    <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>$362 / night</p>
+                    {/* <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.price} / night</p> */}
+                    <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{isAvailable(`${destination.booking_secured}`)}</p>
+                    <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
+                </div>
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
