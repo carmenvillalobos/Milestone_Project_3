@@ -38,24 +38,6 @@ function SignUp() {
                 <h1>Sign Up</h1>
             </div>
             <form className="signup-form col-sm-8" onSubmit={handleSubmit}>
-                {/* <div>
-                    <label htmlFor="firstName"><b>First Name</b></label>
-                    <input
-                        type="text"
-                        id="firstName"
-                        required
-                        className="form-control mb-3"
-                        placeholder="First Name"/>
-                </div>
-                <div>
-                    <label htmlFor="lastName"><b>Last Name</b></label>
-                    <input
-                        type="text"
-                        id="lastName"
-                        required
-                        className="form-control mb-3"
-                        placeholder="Last Name"/>
-                </div> */}
                 <div>
                     <label htmlFor="email"><b>Email address</b></label>
                     <input
