@@ -1,6 +1,5 @@
 import NavBar from "../components/NavBar"
 import Card from "react-bootstrap/Card"
-import Cards from '../components/Cards'
 import '../assets/css/Trips.css'
 import '../assets/css/Cards.css'
 

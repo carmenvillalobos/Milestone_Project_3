@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 import '../assets/css/SearchBar.css'
-import { useNavigate, Link} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 function SearchBar() {
     const navigate = useNavigate();

@@ -4,8 +4,7 @@ import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button"
 import "../assets/css/Trips.css"
 import "../assets/css/Homepage.css"
-import "../assets/css/Cards.css"
-import Cards from "../components/Cards"
+import "../assets/css/Destinations.css"
 
 function DestinationIndex(props) {
     const [destinations, setDestinations] = useState([])
@@ -22,8 +21,8 @@ function DestinationIndex(props) {
 
     let formattedDestinations = destinations.map((destination) => {
         return (
-            <div className="grid pop-cards" key={destination.id}>
-                <Card className="box boxes">
+            <div className="grid-2 pop-cards" key={destination.id}>
+                <Card className="box-2 boxes-2">
                     <Card.Img src={destination.image} className="card-img"/>
                     <Card.Body>
                         <Card.Text className="Title">{destination.location}</Card.Text>
