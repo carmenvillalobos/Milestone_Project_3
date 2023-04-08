@@ -1,8 +1,6 @@
 // DEPENDENCIES
 const users = require('express').Router()
 const { User } = require('../models')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
 
 //GET ALL users
 users.get('/', async (req, res) => {
@@ -28,17 +26,18 @@ users.get('/:id', async (req, res) => {
 })
 
 //CREATE A user
-users.post('/', async (req, res) => {
+users.post('/signup', async (req, res) => {
     try {
-        const newUser = await User.create(req.body)
-        res.status(200).json({
-            message: 'Successfully inserted a new user',
-            data: newUser
-        })
-    } catch(err) {
-        res.status(500).json(err)
+    //   console.log(req.body)
+      const { email, username, password } = req.body;
+      const user = await User.create({ username, password, email, created_at: new Date(), updated_at: new Date()});
+      console.log(user.toJSON());
+      res.status(201).json(user);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal server error' });
     }
-})
+  });
 
 // CREATE a user with a hashed password
 // users.post('/', async (req, res) => {
@@ -80,19 +79,23 @@ function verifyToken(req, res, next) {
 
 //LOGIN a particular user (checking that the username and password match up!)
 users.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-    const user = await User.findOne({ where: {email: email}})
-
-    if (!user || user.password.toLowerCase() !== password.toLowerCase()) {
-        return res.status(401).json({ message: 'Invalid email or password' });
-      }
+    const user = users.find(user => users.email === req.body.email)
     
-      const token = generateToken({
-        email: user.email, 
-        password: email.password
-    });
-      res.json({ token });
-    })
+    const token = generateToken(user)
+    res.json({ token })
+    if (user == null) {
+        return res.status(400).send('Cannot find user')
+    }
+    try {
+        if(await bcrypt.compare(req.body.password, user.password)) {
+           res.send('Success') 
+        } else {
+            res.send('Not allowed.')
+        }
+    } catch {
+        res.status(500).send()
+    }
+})
 
 // UPDATE A user
 users.put('/:id', async (req, res) => {

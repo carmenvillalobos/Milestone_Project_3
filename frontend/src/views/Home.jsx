@@ -2,7 +2,6 @@ import '../assets/css/Homepage.css'
 import '../assets/css/Cards.css'
 import NavBar from "../components/NavBar"
 import SearchBar from '../components/SearchBar'
-import Cards from '../components/Cards'
 import Button from "react-bootstrap/Button"
 import Card from 'react-bootstrap/Card'
 

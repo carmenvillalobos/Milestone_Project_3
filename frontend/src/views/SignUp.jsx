@@ -3,19 +3,33 @@ import Card from "react-bootstrap/Card"
 import NavBar from "../components/NavBar"
 import "../assets/css/SignUp.css"
 import { useState } from 'react';
-// import axios from 'axios'
+import { useNavigate} from 'react-router-dom';
+import axios from 'axios'
 
-function SignUp(props) {
-    const [signUp, setSignUp] = useState({
-        email: '',
-        username: '',
-        password: ''
-    });
+function SignUp() {
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('')
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(signUp)
-    }
+    function handleChange() {
+        let path = `/login`
+        navigate(path);
+      }
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const data = { email, username, password };
+        try {
+            const response = await axios.post('http://localhost:3001/users/signup', data);
+            console.log(response.data);
+            // handle successful signup
+        } catch (error) {
+            console.error(error);
+            // handle signup error
+        }
+    };
+
     return(
         <div className="background">
             <NavBar/>
@@ -24,7 +38,7 @@ function SignUp(props) {
                 <h1>Sign Up</h1>
             </div>
             <form className="signup-form col-sm-8" onSubmit={handleSubmit}>
-                <div>
+                {/* <div>
                     <label htmlFor="firstName"><b>First Name</b></label>
                     <input
                         type="text"
@@ -41,24 +55,20 @@ function SignUp(props) {
                         required
                         className="form-control mb-3"
                         placeholder="Last Name"/>
-                </div>
+                </div> */}
                 <div>
                     <label htmlFor="email"><b>Email address</b></label>
                     <input
                         type="email"
                         id="email"
                         required
+                        onChange={(e) => {setEmail(e.target.value)}}
                         className="form-control mb-3"
                         placeholder="Enter Email"/>
                 </div>
                 <div>
                     <label htmlFor="username"><b>Username</b></label>
-                    <input
-                        type="text"
-                        id="username"
-                        required
-                        className="form-control mb-3"
-                        placeholder="Enter Username"/>
+                    <input type="text" id="username" required onChange={(e)=>{setUsername(e.target.value)}} className="form-control mb-3" placeholder="Enter Username"/>
                 </div>
                 <div>
                     <label htmlFor="password"><b>Password</b></label>
@@ -66,26 +76,27 @@ function SignUp(props) {
                         type="password"
                         id="password"
                         required
+                        onChange={(e) => {setPassword(e.target.value)}}
                         className="form-control mb-3"
                         placeholder="Enter Password"/>
                 </div>
                 <div className="buttons">
-                <Button
+                {/* <Button
                     type="button"
                     className="back-btn col-sm-3"
                     href="/">
                     Back
-                </Button>
+                </Button> */}
                 <Button
                     type="submit"
                     className="submit-info col-sm-3"
-                    href="/Login">
+                    >
                     Submit
                 </Button>
             </div>
             </form>
             
-            <button className="link-btn" href="/Login">Already have an account? Log in here.</button>
+            <button className="link-btn" onClick={handleChange}>Already have an account? Log in here.</button>
         </Card>
         </div>
     )

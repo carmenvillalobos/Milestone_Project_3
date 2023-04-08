@@ -5,7 +5,6 @@ import Button from "react-bootstrap/esm/Button"
 import "../assets/css/Trips.css"
 import "../assets/css/Homepage.css"
 import "../assets/css/Cards.css"
-import Cards from "../components/Cards"
 
 function DestinationIndex(props) {
     const [destinations, setDestinations] = useState([])
