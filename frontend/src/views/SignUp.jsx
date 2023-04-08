@@ -89,8 +89,7 @@ function SignUp() {
                 </Button> */}
                 <Button
                     type="submit"
-                    className="submit-info col-sm-3"
-                    >
+                    className="submit-info col-sm-3">
                     Submit
                 </Button>
             </div>
