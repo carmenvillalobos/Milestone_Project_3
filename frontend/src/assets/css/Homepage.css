@@ -51,6 +51,9 @@
 
 .view-all{
     justify-content: center;
+    height: 40px;
+    width: 175px;
+    margin-top: -80px;
 }
 
 .homeImgContainer {
@@ -58,6 +61,7 @@
 }
 
 .pop-cards{
-    margin-top: -100px;
-    margin-bottom: 300px;
+    margin-top: -25px;
+    /* margin-bottom: 100px; */
+    position: relative;
 }

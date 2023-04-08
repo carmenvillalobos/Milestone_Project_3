@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button"
 import Card from 'react-bootstrap/Card'
 
 
-function Homepage (props){
+function Homepage (){
     return(
         <div className='main'>
             <NavBar/>
@@ -26,7 +26,7 @@ function Homepage (props){
                 </div>
                 <div className="grid">
                     <Card className="box boxes">
-                        <Card.Img src='https://images.unsplash.com/photo-1624128082323-beb6b8b508db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3BhbmlzaCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="empenadas" className="card-img"/>
+                        <Card.Img src='https://images.unsplash.com/photo-1624128082323-beb6b8b508db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3BhbmlzaCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="empenadas" className="card-img card-img-2"/>
                         <Card.Body>
                             <Card.Text className="Title">Cultural staples & delicacies</Card.Text>
                         </Card.Body>
