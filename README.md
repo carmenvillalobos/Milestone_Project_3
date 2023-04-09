@@ -44,6 +44,7 @@ Destinations Table
 - A bug that exists in our application is that even though a user can create an account, the user is not aware they created it becuase there is no indication from the frontend. Also a user can not yet add a trip to their personal account.
 - Ideally, when you submit your signup form, the app redirects you to the login page so that you could login. Once you hit the login button, the app will redirect you to the home page where you are greeted by your name.
 - When you click on the reserve button on the individual destination page, it does not add the trip to the "My Trips" view page. This is becuase we have not yet added a route for it to publish on the my trips page. 
+- Some of the styling still needs work. For example when viewing the mobile browser, the hamburger menu on the navbar moves some of the react components downward. These will be fixed in time by trail and error.   
 
 # What resources did we use to help create our application?
 - https://react.dev/
