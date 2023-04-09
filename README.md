@@ -84,7 +84,9 @@ Destinations Table
     - command: npx sequelize-cli db:migrate
 7) Run seeder data
     - npx sequelize-cli db:seed:all
-    -This command will run all of our destination seeders
+    - This command will run all of our destination seeders
+    - npx sequelize-cli db:seed:undo
+    - This command will undo all the destination seeders
     - While we will eventually deploy this appliaction and have a set database with loactions everyone will see, this is for the tiime being how we generate the destinations. 
 
 # Getting Started with Create React App
