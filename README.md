@@ -41,10 +41,9 @@ Destinations Table
 | POST | `/SignUp` | Create an account |
 
 # What bugs exist in our application that we still have not fixed?
-- A bug that exists in our application is being able to successfully allow a user to create an account and add a trip to their personal account
-- For the signin and login page, the hyperlinks at the bottom don't work
-- The signup form button isn't publishing to our backend. Ideally, when you submit your signup form, the app redirects ts you to the login page so that you could login. Once you hit the login button, the app will redirect you to the home page where you are greeted by your name.
-- When you click on the reserve button on the individual destination page, it does not add the trip to the "My Trips" view page.
+- A bug that exists in our application is that even though a user can create an account, the user is not aware they created it becuase there is no indication from the frontend. Also a user can not yet add a trip to their personal account.
+- Ideally, when you submit your signup form, the app redirects you to the login page so that you could login. Once you hit the login button, the app will redirect you to the home page where you are greeted by your name.
+- When you click on the reserve button on the individual destination page, it does not add the trip to the "My Trips" view page. This is becuase we have not yet added a route for it to publish on the my trips page. 
 
 # What resources did we use to help create our application?
 - https://react.dev/
@@ -82,6 +81,10 @@ Destinations Table
 6) Run a migration
     - this connects our models (tables) to our database (called milestone_project_3)
     - command: npx sequelize-cli db:migrate
+7) Run seeder data
+    - npx sequelize-cli db:seed:all
+    -This command will run all of our destination seeders
+    - While we will eventually deploy this appliaction and have a set database with loactions everyone will see, this is for the tiime being how we generate the destinations. 
 
 # Getting Started with Create React App
 
