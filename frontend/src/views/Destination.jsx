@@ -31,17 +31,33 @@ function Destination(props) {
             <div className="a">
                 <NavBar/>
             </div>
-            <div className="flex-box">
+            <div className="flex-box row">
+
                 <div className="destination-cardb">
-                    <p className="name" style={{color: "black"}}>{destination.location}</p>
-                    <img className="destination-img" src={destination.image} alt={destination.location}/>
+                    <div className="center">
+                        {/* <p className="name" style={{color: "black"}}>Machu Picchu, Peru</p> */}
+                        {/* <img className="destination-img" src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFjaHUlMjBwaWNjaHV8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60" alt={destination.location}/> */}
+                        <p className="name" style={{color: "black"}}>{destination.location}</p>
+                        <img className="destination-img" src={destination.image} alt={destination.location}/>
+                    </div>
                 </div>
 
                 <div className="destination-descriptionc">
-                    <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
-                    <p style={{color: "white", border: "2px solid", borderRadius: "5px"}}>${destination.price} / night</p>
-                    <Button className="reserve border col-sm-3" variant="dark" onClick={handleShow}>Reserve</Button>
+                    <div className="center">
+                        <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>{destination.description}</p>
+                        {/* <p className="description-txt" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, */}
+                            {/* molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                            optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                            obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                            nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                            tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                            quia. Quo neque error repudiandae fuga? </p> */}
+                        <p className="price" style={{color: "white", border: "2px solid", borderRadius: "5px"}}>${destination.price} / night</p>
+                        <Button className="reserve border col-sm-5" variant="dark" onClick={handleShow}>Reserve</Button>
+                    </div>
                 </div>
+
             </div>
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>

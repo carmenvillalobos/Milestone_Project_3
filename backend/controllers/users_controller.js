@@ -26,17 +26,18 @@ users.get('/:id', async (req, res) => {
 })
 
 //CREATE A user
-users.post('/', async (req, res) => {
+users.post('/signup', async (req, res) => {
     try {
-        const newUser = await User.create(req.body)
-        res.status(200).json({
-            message: 'Successfully inserted a new user',
-            data: newUser
-        })
-    } catch(err) {
-        res.status(500).json(err)
+    //   console.log(req.body)
+      const { email, username, password } = req.body;
+      const user = await User.create({ username, password, email, created_at: new Date(), updated_at: new Date()});
+      console.log(user.toJSON());
+      res.status(201).json(user);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: 'Internal server error' });
     }
-})
+  });
 
 // CREATE a user with a hashed password
 // users.post('/', async (req, res) => {

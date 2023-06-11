@@ -1,10 +1,5 @@
-body{
-    /* background: rgb(84, 84, 63); */
-    background-color: #E1D9D1;
-}
-
 .background{
-    background: rgb(84, 84, 63);
+   background-color: #E1D9D1;
     min-height: 100vh;
 }
 
@@ -35,12 +30,5 @@ h1{
 
 .buttons{
     width: 100%;
-}
-
-.back-btn{
-    float: left;
-}
-
-.submit-info{
-    float: right;
+    text-align: center;
 }

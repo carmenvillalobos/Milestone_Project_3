@@ -25,7 +25,8 @@
  
 .grid{
     height: 100%;
-    margin-top: 20px;
+    margin-top: -40px;
+    margin-bottom: 5px;
 }
 
 .text{
@@ -50,6 +51,17 @@
 
 .view-all{
     justify-content: center;
+    height: 40px;
+    width: 175px;
+    margin-top: -80px;
 }
 
- 
+.homeImgContainer {
+    height: calc(50vh - 104px);
+}
+
+.pop-cards{
+    margin-top: -25px;
+    /* margin-bottom: 100px; */
+    position: relative;
+}

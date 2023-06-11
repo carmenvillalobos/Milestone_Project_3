@@ -2,16 +2,16 @@ import '../assets/css/Homepage.css'
 import '../assets/css/Cards.css'
 import NavBar from "../components/NavBar"
 import SearchBar from '../components/SearchBar'
-import Cards from '../components/Cards'
 import Button from "react-bootstrap/Button"
 import Card from 'react-bootstrap/Card'
 
 
-function Homepage (props){
+function Homepage (){
     return(
         <div className='main'>
             <NavBar/>
-            <div>
+            
+            <div className="homeImgContainer">
                 <img className="home-img" src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80" alt="travel"/>
                 <SearchBar/>
             </div>
@@ -26,7 +26,7 @@ function Homepage (props){
                 </div>
                 <div className="grid">
                     <Card className="box boxes">
-                        <Card.Img src='https://images.unsplash.com/photo-1624128082323-beb6b8b508db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3BhbmlzaCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="empenadas" className="card-img"/>
+                        <Card.Img src='https://images.unsplash.com/photo-1624128082323-beb6b8b508db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c3BhbmlzaCUyMGZvb2R8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60' alt="empenadas" className="card-img card-img-2"/>
                         <Card.Body>
                             <Card.Text className="Title">Cultural staples & delicacies</Card.Text>
                         </Card.Body>

@@ -3,11 +3,12 @@
 } */
 .flex-box{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     width: 100%;
     min-height: 100vh;
     background-color: #E1D9D1; 
+    margin: auto;
 }
 
 .a{
@@ -16,13 +17,16 @@
 }
 
 .destination-cardb{
+    display: flex;
     flex: 1;
-    min-height: 30vh;
+    min-height: 30%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .name{
     text-align: center;
-    width: 40%;
+    width: 50%;
     margin: auto;
     padding: auto;
     font-weight: 500;
@@ -35,22 +39,22 @@
     width: 400px;
     object-fit: cover;
     border-radius: 5px;
-    position: relative;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 40px;
-    left: 0;
 }
 
 .destination-descriptionc{
-    padding: 25px;
-    flex-direction: column;
+    display: flex;
     text-align: center;
     flex: 1;
-    border: 2px solid black;
-    border-radius: 5px;
+    background-color: rgb(133, 131, 131);
+    width: 50vh;
+    justify-content: center;
+}
+
+.description-txt, .price{
+    justify-content: center;
     background-color: rgb(58, 53, 53);
-    justify-content: space-evenly;
-    margin: auto;
 }
 
 .reserve{
@@ -58,14 +62,13 @@
     margin: auto;
 }
 
+.center{
+    margin: auto;
+}
+
 @media (min-width: 600px) {
     .flex-box {
       flex-direction: row;
-      flex-wrap: wrap;
     }
-    /* .destination-descriptionc{
-        
-        margin: 50%;
-    } */
 }
 

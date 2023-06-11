@@ -1,10 +1,6 @@
-/* .grid{
-    min-height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    /* margin-top: 60px;
-}  */
+.grid{
+    margin-bottom: auto;
+} 
 
 .fav-img{
     width: 100%;
@@ -22,9 +18,4 @@
     padding: auto;
     margin-top: 45px;
     background-color: transparent;
-}
-
-.pop-cards{
-    position: relative;
-    top: 55px;
 }

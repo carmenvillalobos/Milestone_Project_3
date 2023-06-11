@@ -1,16 +1,19 @@
-# What is our application about?
-Our application is a travel booking site where users can create their own account and book trips to a list of destinations.
+# Travel Booking Site
 
-# What is the inspiration of our application?
+## A travel booking site where users can create their own account and book trips to a list of destinations.
+
+Click <a href="">here</a> for a live version of the app!
+
+### What is the inspiration of our application?
 The inspiration of our application was to create a site where users can create their own account through user authentication and reserve specific locations to their account that they would like to travel to.
 
-# Which languages, frameworks, libraries, and database did we use?
+### Which languages, frameworks, libraries, and database did we use?
 - Languages: Javascript/JSX, SQL
 - Frameworks: React, Express.js
 - Libraries: Node.js
 - Database: PostgreSQL
 
-# What do our tables look like?
+### What do our tables look like?
 Users Table
 
 | id | username | password | email |
@@ -29,7 +32,7 @@ Destinations Table
 | 6 | Tokyo, Japan | `https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dG9reW98ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60` | Tokyo is the enormous and wealthy capital of Japan, and also its main city, overflowing with culture, commerce, and most of all, people. | 371 |
 
 
-# What do our routes look like?
+### What do our routes look like?
 
 | Method | Path | Purpose |
 | ------ | ------------------------------------- | ----------------------------- |
@@ -40,10 +43,13 @@ Destinations Table
 | POST | `/Login` | Login into your personal account |
 | POST | `/SignUp` | Create an account |
 
-# What bugs exist in our application that we still have not fixed?
-- A bug that exists in our application is being able to successfully allow a user to create an account and add a trip to their personal account
+### What bugs exist in our application that we still have not fixed?
+- A bug that exists in our application is that even though a user can create an account, the user is not aware they created it becuase there is no indication from the frontend. Also a user can not yet add a trip to their personal account.
+- Ideally, when you submit your signup form, the app redirects you to the login page so that you could login. Once you hit the login button, the app will redirect you to the home page where you are greeted by your name.
+- When you click on the reserve button on the individual destination page, it does not add the trip to the "My Trips" view page. This is becuase we have not yet added a route for it to publish on the my trips page. 
+- Some of the styling still needs work. For example when viewing the mobile browser, the hamburger menu on the navbar moves some of the react components downward. These will be fixed in time by trail and error.   
 
-# What resources did we use to help create our application?
+### What resources did we use to help create our application?
 - https://react.dev/
 - https://sequelize.org/
 - https://unsplash.com/
@@ -51,7 +57,7 @@ Destinations Table
 - pgAdmin
 - Postman
 
-# How we set up our database to our application 
+### How we set up our database to our application 
 1) Create a backend folder 
 2) Install the following dependencies to create a package-lock.json & package.json for the backend folder:
 - sequelize
@@ -74,79 +80,14 @@ Destinations Table
     - in our case, I typed the following to create two tables (one for the users and another for the destinations):
         - npx sequelize-cli model:generate --name Users --attributes username:string,password:string,first_name:string,last_name:string,email:string
         - npx sequelize-cli model:generate --name Destinations --attributes location:string,image:string,description:string,price:integer
-    - Note that we did not include an id for any columns since this cli command makes automatically creates an id column
+    - Note that we did not include an id for any columns since this cli command automatically creates an id column
 5) Create an empty database on pgAdmin 4
 6) Run a migration
     - this connects our models (tables) to our database (called milestone_project_3)
     - command: npx sequelize-cli db:migrate
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7) Run seeder data
+    - npx sequelize-cli db:seed:all
+    - This command will run all of our destination seeders
+    - npx sequelize-cli db:seed:undo
+    - This command will undo all the destination seeders
+    - While we will eventually deploy this appliaction and have a set database with loactions everyone will see, this is for the tiime being how we generate the destinations. 

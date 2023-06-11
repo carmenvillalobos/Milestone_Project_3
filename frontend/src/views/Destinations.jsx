@@ -4,15 +4,14 @@ import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button"
 import "../assets/css/Trips.css"
 import "../assets/css/Homepage.css"
-import "../assets/css/Cards.css"
-import Cards from "../components/Cards"
+import "../assets/css/Destinations.css"
 
 function DestinationIndex(props) {
     const [destinations, setDestinations] = useState([])
 
     useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(`http://localhost:3000/destinations`)
+			const response = await fetch(`http://localhost:3001/destinations`)
             const resData = await response.json()
             console.log(resData)
 			setDestinations(resData)
@@ -22,8 +21,8 @@ function DestinationIndex(props) {
 
     let formattedDestinations = destinations.map((destination) => {
         return (
-            <div className="grid pop-cards" key={destination.id}>
-                <Card className="box boxes">
+            <div className="grid-2 pop-cards" key={destination.id}>
+                <Card className="box-2 boxes-2">
                     <Card.Img src={destination.image} className="card-img"/>
                     <Card.Body>
                         <Card.Text className="Title">{destination.location}</Card.Text>
@@ -37,7 +36,7 @@ function DestinationIndex(props) {
     return(
         <div className='main'>
             <NavBar/>
-            <div>
+            <div className="homeImgContainer">
                 <img className="fav-img" src="https://images.unsplash.com/photo-1488085061387-422e29b40080?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhdmVsfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=1035&q=60" alt="waterfront"/>
                 <Card className="Trips border-0 mb-2">
                     <Card.Title><h1 style={{color: "white", fontWeight: "500", fontSize: "30px", marginTop: "20px", padding: "auto"}}>Destinations</h1></Card.Title>
