@@ -52,7 +52,6 @@ function SearchBar() {
             </Card.Body>
             </Card>
             </div>
-      
     );
   }
 

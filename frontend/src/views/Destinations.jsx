@@ -12,7 +12,7 @@ function DestinationIndex(props) {
 
     useEffect(() => {
 		const fetchData = async () => {
-			const response = await fetch(`http://localhost:3001/destinations`)
+			const response = await fetch(`http://localhost:3000/destinations`)
             const resData = await response.json()
             console.log(resData)
 			setDestinations(resData)
